@@ -10,12 +10,13 @@ namespace PixelCrew.UI.MainMenu
         private Action _closeAction;
         public GameObject MainMenu;
         public GameObject PauseButton;
+        
 
 
         public void OnShowSettings()
         {
             var window = Resources.Load<GameObject>("UI/SettingsWindow");
-            var canvas = FindObjectOfType<Canvas>();
+            var canvas = FindObjectOfType<MainMenuWindow>();
             Instantiate(window, canvas.transform);
         }
 
@@ -43,6 +44,8 @@ namespace PixelCrew.UI.MainMenu
             base.OnCloseAnimationComplete();
            _closeAction?.Invoke();
 
+           
         }
+        
     }
 }

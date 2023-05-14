@@ -7,7 +7,7 @@ namespace Skripts
     {
         public bool PauseGame;
         public GameObject Page1;
-        public GameObject BookButton;
+        
         
             
 
