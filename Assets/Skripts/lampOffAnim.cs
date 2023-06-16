@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class lampOffAnim : MonoBehaviour
@@ -10,27 +7,20 @@ public class lampOffAnim : MonoBehaviour
    private Animator _animator;
    public GameObject LightButtonOn;
    public GameObject LightButtonOff;
-
    private void Start()
    {
       _animator = GetComponent<Animator>();
-   }
-
+   } 
    public void lightOn()
-   {
-
+   { 
       _animator.SetTrigger(On);
       LightButtonOn.SetActive(false);
       LightButtonOff.SetActive(true);
-   }
-
+   } 
    public void lightoff()
    {
       _animator.SetTrigger(Off);
       LightButtonOn.SetActive(true);
       LightButtonOff.SetActive(false);
-      
    }
-
-   
 }

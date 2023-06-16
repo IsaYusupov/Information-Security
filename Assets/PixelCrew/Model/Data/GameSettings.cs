@@ -1,5 +1,4 @@
-﻿using System;
-using PixelCrew.Model.Data.Properties;
+﻿using PixelCrew.Model.Data.Properties;
 using UnityEngine;
 
 namespace PixelCrew.Model.Data
@@ -15,22 +14,15 @@ namespace PixelCrew.Model.Data
         private static GameSettings _instance;
         public static GameSettings I => _instance == null ? LoadGameSettings() : _instance;
         
-        
-
-
         private static GameSettings LoadGameSettings()
         {
            return _instance = Resources.Load<GameSettings>("GameSettings");
         }
-                
-                
-
         private void OnEnable()
         {
             _music = new FloatPersistentProperty(1, SoundSetting.Music.ToString());
             _sfx = new FloatPersistentProperty(1, SoundSetting.Sfx.ToString());
-        }
-
+        } 
         private void OnValidate()
         {
             Music.Validate();

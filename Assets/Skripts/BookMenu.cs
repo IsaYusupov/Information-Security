@@ -3,23 +3,23 @@
 namespace Skripts
 {
     public class BookMenu : MonoBehaviour
-        
+
     {
         public bool PauseGame;
         public GameObject Page1;
-        
-        
-            
 
-        
+
+
+
+
         public void Resume()
-        { 
-          
+        {
+
             Page1.SetActive(false);
-            Time.timeScale = 1f; 
-            PauseGame = false; 
-               
-                
+            Time.timeScale = 1f;
+            PauseGame = false;
+
+
         }
 
         public void Pause()
@@ -27,7 +27,6 @@ namespace Skripts
             Page1.SetActive(true);
             Time.timeScale = 0f;
             PauseGame = true;
-                
         }
     }
 }

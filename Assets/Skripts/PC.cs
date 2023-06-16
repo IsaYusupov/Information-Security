@@ -1,4 +1,3 @@
-using PixelCrew.UI.Hud;
 using UnityEngine;
 
 public class PC : MonoBehaviour
@@ -49,9 +48,6 @@ public class PC : MonoBehaviour
         MainWindow.SetActive(false);
         Reguests.SetActive(false);
     }
-
-
-
 }
 
 

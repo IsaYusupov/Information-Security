@@ -2,7 +2,6 @@
 using PixelCrew.Model.Data;
 using PixelCrew.Model.Data.Properties;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 namespace PixelCrew.Components.Audio
 {
@@ -18,15 +17,11 @@ namespace PixelCrew.Components.Audio
             _model = FindProperty();
             _model.OnChanged += OnSoundSettingChanged;
             OnSoundSettingChanged(_model.Value, _model.Value);
-
-        }
-
+        } 
         private void OnSoundSettingChanged(float newValue, float oldValue)
         {
             _source.volume = newValue;
-
-        }
-
+        } 
         private FloatPersistentProperty FindProperty()
         {
             switch (_mode)
@@ -36,7 +31,6 @@ namespace PixelCrew.Components.Audio
                 case GameSettings.SoundSetting.Sfx :
                     return   GameSettings.I.Sfx;
             }
-
             throw new ArgumentException("Undefined mode");
         }
     }

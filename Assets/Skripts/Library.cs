@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Skripts
 {
@@ -7,18 +6,13 @@ namespace Skripts
 
     {
         public GameObject library;
-
-        
         public void OnShowLibraryButton()
         {
             library.SetActive(true);
         }
-
         public void OnCloseLibraryButton()
         {
             library.SetActive(false);
         }
-        
-
     }
 }

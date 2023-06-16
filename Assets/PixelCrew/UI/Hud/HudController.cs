@@ -7,8 +7,5 @@ namespace PixelCrew.UI.Hud
 
     {
         [SerializeField] private ProgressBarWidget _experienceBar;
-        
-        
-
     }
 }

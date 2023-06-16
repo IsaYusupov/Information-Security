@@ -1,7 +1,4 @@
-using PixelCrew.UI.MainMenu;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-
 namespace Skripts
 {
     public class PauseMenu : MonoBehaviour

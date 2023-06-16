@@ -22,13 +22,11 @@ public class CalculatePages : MonoBehaviour
 		{
 			Next();
 		}
-
 		if (Input.GetKeyDown(KeyCode.J))
 		{
 			Prev();
 		}
-	}
-
+	} 
 	void Start()
 	{
 		nextButton.onClick.AddListener(()=>{Next();});
@@ -38,15 +36,14 @@ public class CalculatePages : MonoBehaviour
 		Calculate(loadBook);
 		pageCount += 2;
 		SetPages();
-	}
-
+	} 
 	public void SetPages()
 	{
 		leftPage.text = pagesList[pageCount];
 		rightPage.text = (pageCount + 1 > pagesList.Count-1) ? string.Empty : pagesList[pageCount + 1];
 		LPN.text = (pageCount + 1).ToString();
 		RPN.text = (pageCount + 2).ToString();
-	}
+	} 
 	public void Next()
 	{	if (pageCount <48 )
 		{ 
@@ -58,7 +55,7 @@ public class CalculatePages : MonoBehaviour
 			nextButton.interactable = false;
 		}
 		}
-	}
+	} 
 	public void Prev()
 	{
 		if (pageCount>=1)
@@ -72,11 +69,8 @@ public class CalculatePages : MonoBehaviour
 			}
 
 			nextButton.interactable = true;
-		
-		
 		}
-	}
-
+	} 
 	void Calculate(string fileName)
 	{
 		TextAsset binary = Resources.Load<TextAsset>(booksPath + "/" + fileName);
@@ -93,8 +87,7 @@ public class CalculatePages : MonoBehaviour
 			prevButton.interactable = false;
 			pageCount = -2;
 		}
-	}
-
+	} 
 	List<string> Pages(string text, Text page) // определяем на сколько страниц нужно разбить текст
 	{
 		if(string.IsNullOrEmpty(text) || page == null) return new List<string>();
@@ -113,7 +106,6 @@ public class CalculatePages : MonoBehaviour
 			pages.Add(current.Substring(0, index));
 			current = current.Substring(index).Trim();
 		}
-
 		return pages;
 	}
 }
