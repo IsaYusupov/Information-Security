@@ -6,7 +6,8 @@ namespace PixelCrew.UI.MainMenu
     {
         private Action _closeAction;
         public GameObject MainMenu;
-        public GameObject PauseButton; 
+        public GameObject PauseButton;
+        
         public void OnShowSettings()
         {
             var window = Resources.Load<GameObject>("UI/SettingsWindow");
@@ -17,7 +18,9 @@ namespace PixelCrew.UI.MainMenu
         {
             PauseButton.SetActive(true);
            MainMenu.SetActive(false);
-        } 
+        }
+
+       
         public void OnExit()
         {
             _closeAction = () =>
